@@ -1,4 +1,5 @@
 import React from "react";
+import { LinkContainer } from "react-router-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart, faUser } from "@fortawesome/free-solid-svg-icons";
 import { Container, Navbar, Nav } from "react-bootstrap";
@@ -7,18 +8,24 @@ const Header = () => {
     <header>
       <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
         <Container>
-          <Navbar.Brand href="/">Tienda</Navbar.Brand>
+          <LinkContainer to="/">
+            <Navbar.Brand>Tienda</Navbar.Brand>
+          </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="/cart">
-                <FontAwesomeIcon icon={faShoppingCart} className="me-1" />
-                Carrito
-              </Nav.Link>
-              <Nav.Link href="/login">
-                <FontAwesomeIcon icon={faUser} className="me-1" />
-                Ingresa
-              </Nav.Link>
+              <LinkContainer to="/cart">
+                <Nav.Link>
+                  <FontAwesomeIcon icon={faShoppingCart} className="me-1" />
+                  Carrito
+                </Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/login">
+                <Nav.Link>
+                  <FontAwesomeIcon icon={faUser} className="me-1" />
+                  Ingresa
+                </Nav.Link>
+              </LinkContainer>
             </Nav>
           </Navbar.Collapse>
         </Container>
