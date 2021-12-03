@@ -1,13 +1,17 @@
-const express = require("express");
-const products = require("./data/products");
-const cors = require("cors");
-const app = express();
+import express from "express";
+import products from "./data/products.js";
+import cors from "cors";
+import dotenv from "dotenv";
 const port = 5000;
+
+dotenv.config();
+
+const app = express();
 
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send("success");
+  res.send("success!");
 });
 
 app.get("/api/products", (req, res) => {
@@ -19,6 +23,8 @@ app.get("/api/products/:id", (req, res) => {
   res.json(product);
 });
 
-app.listen(port, () => {
-  console.log(`App listening at http://localhost:${port}`);
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`App listening at http://localhost:${PORT}`);
 });
