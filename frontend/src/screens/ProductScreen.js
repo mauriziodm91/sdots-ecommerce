@@ -1,30 +1,30 @@
 //Componente para cargar el producto detallado en pantalla
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { Row, Col, Image, ListGroup, Card, Button } from "react-bootstrap";
-import Rating from "../components/Rating";
-import axios from "axios";
+import React, { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
+import { Row, Col, Image, ListGroup, Card, Button } from "react-bootstrap"
+import Rating from "../components/Rating"
+import axios from "axios"
 
 const ProductScreen = ({ match }) => {
-  const [product, setProduct] = useState({});
+  const [product, setProduct] = useState({})
 
   useEffect(() => {
     const fetchProduct = async () => {
       try {
         const { data } = await axios.get(
           `http://127.0.0.1:5000/api/products/${match.params.id}`
-        );
-        setProduct(data);
+        )
+        setProduct(data)
       } catch (e) {
-        console.error(e);
+        console.error(e)
       }
-    };
-    fetchProduct();
-  }, [match]);
+    }
+    fetchProduct()
+  }, [match])
 
   return (
     <>
-      <Link className="btn btn-light my-3" to="/">
+      <Link className='btn btn-light my-3' to='/'>
         Volver
       </Link>
       <Row>
@@ -32,7 +32,7 @@ const ProductScreen = ({ match }) => {
           <Image src={product.image} alt={product.name} fluid />
         </Col>
         <Col md={3}>
-          <ListGroup variant="flush">
+          <ListGroup variant='flush'>
             <ListGroup.Item>
               <h3>{product.name}</h3>
             </ListGroup.Item>
@@ -48,7 +48,7 @@ const ProductScreen = ({ match }) => {
         </Col>
         <Col>
           <Card>
-            <ListGroup variant="flush">
+            <ListGroup variant='flush'>
               {/*remover bordes externos */}
               <ListGroup.Item>
                 <Row>
@@ -67,8 +67,8 @@ const ProductScreen = ({ match }) => {
                 </Row>
               </ListGroup.Item>
               <Button
-                className="btn-block"
-                type="button"
+                className='btn-block'
+                type='button'
                 disabled={product.countInStock === 0}
               >
                 Agregar al carrito
@@ -78,7 +78,7 @@ const ProductScreen = ({ match }) => {
         </Col>
       </Row>
     </>
-  );
-};
+  )
+}
 
-export default ProductScreen;
+export default ProductScreen

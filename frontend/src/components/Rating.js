@@ -1,17 +1,17 @@
-import React from "react";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { far } from "@fortawesome/free-regular-svg-icons";
-import { faStarHalfAlt, faStar } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react"
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { far } from "@fortawesome/free-regular-svg-icons"
+import { faStarHalfAlt, faStar } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 library.add(
   far,
   faStar,
   faStarHalfAlt
-); /*importando componentes de fontawesome de manera global*/
+) /*importando componentes de fontawesome de manera global*/
 const Rating = ({ value, text }) => {
   return (
-    <div className="rating">
-      <span className="rating-star">
+    <div className='rating'>
+      <span className='rating-star'>
         <FontAwesomeIcon
           icon={
             value >= 1
@@ -22,7 +22,7 @@ const Rating = ({ value, text }) => {
           }
         />
       </span>
-      <span className="rating-star">
+      <span className='rating-star'>
         <FontAwesomeIcon
           icon={
             value >= 2
@@ -33,7 +33,7 @@ const Rating = ({ value, text }) => {
           }
         />
       </span>
-      <span className="rating-star">
+      <span className='rating-star'>
         <FontAwesomeIcon
           icon={
             value >= 3
@@ -44,7 +44,7 @@ const Rating = ({ value, text }) => {
           }
         />
       </span>
-      <span className="rating-star">
+      <span className='rating-star'>
         <FontAwesomeIcon
           icon={
             value >= 4
@@ -55,7 +55,7 @@ const Rating = ({ value, text }) => {
           }
         />
       </span>
-      <span className="rating-star">
+      <span className='rating-star'>
         <FontAwesomeIcon
           icon={
             value >= 5
@@ -69,7 +69,7 @@ const Rating = ({ value, text }) => {
       {/*la linea inferior devuelve texto si este existe*/}
       <span>{text && text}</span>
     </div>
-  );
-};
+  )
+}
 
-export default Rating;
+export default Rating
