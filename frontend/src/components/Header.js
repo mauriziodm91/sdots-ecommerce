@@ -51,12 +51,12 @@ const Header = () => {
                   <LinkContainer to='/admin/userlist'>
                     <NavDropdown.Item>Usuarios</NavDropdown.Item>
                   </LinkContainer>
-                  {/* <LinkContainer to='admin/productlist'>
+                  <LinkContainer to='admin/productlist'>
                     <NavDropdown.Item>Productos</NavDropdown.Item>
                   </LinkContainer>
                   <LinkContainer to='admin/orderlist'>
                     <NavDropdown.Item>Ordenes</NavDropdown.Item>
-                  </LinkContainer> */}
+                  </LinkContainer>
                 </NavDropdown>
               )}
             </Nav>
