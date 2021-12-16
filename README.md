@@ -2,12 +2,9 @@
 
 Para este challenge quise crear lo mas cercano a una aplicacion de ecommerce
 
-![screenshot](https://github.com/bradtraversy/proshop_mern/blob/master/uploads/Screen%20Shot%202020-09-29%20at%205.50.52%20PM.png)
-
 ## Funciones
 
 - carrito de compras
-- Product reviews and ratings//
 - Guardado de ordenes por usuario
 - Administracion de productos por medio de cuenta de administrador
 - Gestion de usuarios por medio de administrador
@@ -15,15 +12,7 @@ Para este challenge quise crear lo mas cercano a una aplicacion de ecommerce
 - Integracion de script de pago de paypal
 - Seeder para la base de datos en mongodb (usuarios y productos)
 
-## Usage
-
-### ES Modules in Node
-
-We use ECMAScript Modules in the backend in this project. Be sure to have at least Node v14.6+ or you will need to add the "--experimental-modules" flag.
-
-Also, when importing a file (not a package), be sure to add .js at the end or you will get a "module not found" error
-
-You can also install and setup Babel if you would like
+## Uso
 
 ### Variables de entorno
 
@@ -81,11 +70,11 @@ Usuarios de prueba para la aplicacion
 admin@admin.com (Admin)
 123456
 
-john@example.com (Customer)
+maurizio@example.com (Customer)
 123456
 
-jane@example.com (Customer)
-123456
+carlos@test.com (Customer)
+hola
 ```
 
 ## Descripcion del Proyecto
@@ -103,6 +92,8 @@ los endpoints son los siguientes
 /api/upload para la subida de archivos de imagenes a la aplicacion
 
 ```
+
+Solamente el usuario administrador puede modificar o eliminar productos y usuarios corrientes
 
 ## Funciones restantes
 
