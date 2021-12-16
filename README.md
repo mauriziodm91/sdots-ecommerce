@@ -81,6 +81,8 @@ hola
 
 Esta aplicacion consiste en un Frontend realizado con react.js decidi utilizar react Bootstrap para aplicar estilos y responsiveness a la aplicacion y uso decorativo de icons con los componentes de fontawesome, react router para hacer una single page aplication por medio de rutas, ademas utilice hooks y redux para la gestion del state dentro de la aplicacion. por ultimo use el source development kit de paypal para hacer un mockup de la funcion de pagos dentro de un sandbox.
 
+las credenciales de inicio de sesion se almacenan en el localstorage asi como tambien los articulos agregados al carrito cuyo proceso de compra no se ha concretado
+
 el backend esta hecho usando nodejs y express para el manejo de rutas y middleware con acceso privado haciendo uso de json webtokens. los datos sensibles como contraseñas de usuarios se encriptan con bcrypt, para la elaboracion de esquemas y conexion con la base de datos use el framework mongoose, y multer para la carga de archivos
 
 los endpoints son los siguientes
