@@ -31,7 +31,7 @@ const UserListScreen = ({ history }) => {
     } else {
       history.push("/login")
     }
-  }, [dispatch, history, successDelete])
+  }, [dispatch, history, successDelete, userInfo])
 
   const deleteHandler = (id) => {
     if (window.confirm("Estas seguro?")) {
@@ -76,7 +76,7 @@ const UserListScreen = ({ history }) => {
                   )}
                 </td>
                 <td>
-                  <LinkContainer to={`/user/${user._id}/edit`}>
+                  <LinkContainer to={`/admin/user/${user._id}/edit`}>
                     <Button variant='light' size='sm'>
                       <FontAwesomeIcon icon={faEdit} />
                     </Button>
