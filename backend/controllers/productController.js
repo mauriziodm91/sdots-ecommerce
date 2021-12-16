@@ -12,8 +12,20 @@ const getProductById = asyncHandler(async (req, res) => {
     res.json(product)
   } else {
     res.status(404)
-    throw new Error("Product not Found") //arroja mensaje de error en caso de no encontrar el producto
+    throw new Error("Producto no encontrado") //arroja mensaje de error en caso de no encontrar el producto
   }
 })
 
-export { getProducts, getProductById }
+const deleteProduct = asyncHandler(async (req, res) => {
+  const product = await Product.findById(req.params.id)
+
+  if (product) {
+    await product.remove()
+    res.json({ message: "Producto eliminado" })
+  } else {
+    res.status(404)
+    throw new Error("Producto no encontrado")
+  }
+})
+
+export { getProducts, getProductById, deleteProduct }
